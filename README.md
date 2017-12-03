@@ -17,3 +17,16 @@ This is a version of the Microsoft Access 2000 Northwind sample database, re-eng
 <img src="https://user-images.githubusercontent.com/31917400/33221409-2b39887a-d147-11e7-99bf-b19ffe2c36de.jpg" width="600" height="300" />
 
 
+__Story:__ You’re a business intelligence analyst for a wholesaler of various food products. You’re in charge of putting together analytics dashboards for management. They have requested that you focus on one area of the business and create a dashboard that provides various summary statistics related to that area. For Each of the following area, create a presentation with visualizations that provides high level summary information about that area.
+ - Customers
+ - Suppliers
+ - Products
+ - Employees
+
+> Questions to help guide our analysis:
+ - Where are my customers located?
+ - What companies supply the majority of the products I sell?
+ - Who are my highest performing employees?
+ - What products are growing in terms of sales?
+
+
