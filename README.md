@@ -23,10 +23,25 @@ __Story:__ You’re a business intelligence analyst for a wholesaler of various 
  - Products
  - Employees
 
-> Questions to help guide our analysis:
- - Where are my customers located?
- - What companies supply the majority of the products I sell?
- - Who are my highest performing employees?
- - What products are growing in terms of sales?
+### Possible Questions to guide our analysis:
+ - 1) Customers_section
+   - _Where are my customers located?
+   - _
+
+
+ - 2) Suppliers_section
+   - _ What companies supply the majority of the products I sell?
+   - _
+
+
+
+ - 3) Products_section
+   - _ What products are growing in terms of sales?
+   - _
+
+
+ - 4) Employees_section
+   - _ Who are my highest performing employees?
+   - _
 
 
