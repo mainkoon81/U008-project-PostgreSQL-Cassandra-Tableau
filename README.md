@@ -3,7 +3,7 @@
 ### [Contents] 
 
 __Case-01.__ Northwind-SQLite3 Data set
-  - func:
+  - encoding: cp1252 
 
 __Case-02.__ 
   - func: 
