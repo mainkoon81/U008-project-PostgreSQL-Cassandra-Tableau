@@ -26,22 +26,24 @@ __Story:__ You’re a business intelligence analyst for a wholesaler of various 
 ### Possible Questions to guide our analysis:
  - 1) Customers_section
    - _Where are my customers located?
-   - _
-
+   - _How much money is being spent by customers in each country on average ?
+   - _Which shipping companies customers have used in each country ? 
+   - _When, how often, how much freight was ordered by the shipments from the specific country ?
+   - _Show by percentage, what country is bringing most profit?
+   - _For customer appreciation day, we are going to call our top customers and state our appreciation. Number of orders placed (OrderIDs) will be our determining factor for top customers to recognize for this event. Which customer has the maximum number of orders ? 
+   - _Which customers in each country made more than the average number of orders?
 
  - 2) Suppliers_section
-   - _ What companies supply the majority of the products I sell?
-   - _
-
-
+   - _How many supplier’s discontinued products were ordered and what’s the loss we could get? 
+   - _What companies supply the majority of the products we sell?
 
  - 3) Products_section
-   - _ What products are growing in terms of sales?
-   - _
-
+   - _What products, product categories are growing in terms of sales? (advanced)
 
  - 4) Employees_section
-   - _ Who are my highest performing employees?
-   - _
-
+   - _Which employees have sold to customers in the same city that they live in ?
+   - _How many days on average does it take for each country from a placed order until for it to be shipped? Is there any relationship between this processing time and employees’ performance? 
+   - _Which employee has the most shipped orders before or on required date and how long they have worked ?? 
+   
+### Q1. 
 
