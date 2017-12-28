@@ -56,7 +56,7 @@ ON o.OrderID = od.OrderID
 GROUP BY Country
 ORDER BY avg_spent DESC
 ```
-<img src="https://user-images.githubusercontent.com/31917400/34425618-661e5d00-ec25-11e7-9b6b-53ec5d671642.jpg" width="600" height="150" />
+<img src="https://user-images.githubusercontent.com/31917400/34425618-661e5d00-ec25-11e7-9b6b-53ec5d671642.jpg" width="600" height="350" />
 
 
 
