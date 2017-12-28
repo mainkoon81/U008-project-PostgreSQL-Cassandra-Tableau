@@ -45,5 +45,69 @@ __Story:__ You’re a business intelligence analyst for a wholesaler of various 
    - _How many days on average does it take for each country from a placed order until for it to be shipped? Is there any relationship between this processing time and employees’ performance? 
    - _Which employee has the most shipped orders before or on required date and how long they have worked ?? 
    
-### Q1. 
+### Q1. Where are my customers located? And how much money is being spent by customers in each country on average ?
+```
+SELECT Country, count(*), avg(od.UnitPrice*od.Quantity*(1 - od.Discount)) avg_spent
+FROM Customers c
+JOIN Orders o
+ON c.CustomerID = o.CustomerID
+JOIN OrderDetails od
+ON o.OrderID = od.OrderID
+GROUP BY Country
+ORDER BY avg_spent DESC
+```
+<img src="https://user-images.githubusercontent.com/31917400/34425618-661e5d00-ec25-11e7-9b6b-53ec5d671642.jpg" width="600" height="150" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
