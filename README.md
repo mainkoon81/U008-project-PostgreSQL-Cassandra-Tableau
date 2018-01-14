@@ -97,7 +97,31 @@ ORDER BY percentage DESC;
 ```
 <img src="https://user-images.githubusercontent.com/31917400/34425623-72ae6128-ec25-11e7-8c6a-05ffbd9efbca.jpg" width="300" height="250" />
 
+### Q4. Which customer has the maximum number of orders ? and which customers in each country made more than the average number of orders?
+ - In the bar-chart above, ‘Save-a-lot Market’ is the company who has the maximum number of orders. 
+ - Those are the companies all above the average number of orders (9.4)  
+```
+SELECT c.Country, c.CompanyName, c.Phone, count(o.OrderID) num_orders
+FROM Customers c
+JOIN Orders o
+ON c.CustomerID = o.CustomerID
+GROUP BY c.CustomerID
+ORDER BY num_orders DESC
 
+WITH t1 AS 
+(SELECT c.Country, c.CompanyName, c.Phone, count(o.OrderID) num_orders
+FROM Customers c
+JOIN Orders o
+ON c.CustomerID = o.CustomerID
+GROUP BY c.CustomerID)
+
+SELECT Country, CompanyName, Phone, num_orders
+FROM t1
+GROUP BY CompanyName, Country
+HAVING num_orders > 9.3258
+ORDER BY num_orders DESC
+```
+<img src="https://user-images.githubusercontent.com/31917400/34425626-7781df72-ec25-11e7-888f-41da51f4b175.jpg" width="600" height="350" />
 
 
 
