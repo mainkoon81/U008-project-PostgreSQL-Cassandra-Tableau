@@ -123,11 +123,43 @@ ORDER BY num_orders DESC
 ```
 <img src="https://user-images.githubusercontent.com/31917400/34425626-7781df72-ec25-11e7-888f-41da51f4b175.jpg" width="600" height="350" />
 
+### Q5. How many supplier’s discontinued products were ordered and what’s the loss we could get? 
+ - Plutzer’s discontinued product -Thringer and Rssie - are ordered the most often , accordingly, we can expect some loss.  
+```
+SELECT p.ProductName, s.CompanyName, o.OrderID, SUM(p.Discontinued) No_More, SUM(o.UnitPrice*o.Quantity*(1 - o.Discount)) Loss
+FROM Products p
+JOIN Suppliers s
+ON p.SupplierID = s.SupplierID
+JOIN OrderDetails o
+ON p.ProductID = o.ProductID
+WHERE p.Discontinued = 1
+Group by p.ProductName, s.CompanyName, o.OrderID
+```
+<img src="https://user-images.githubusercontent.com/31917400/34916038-d05abf78-f928-11e7-8ecf-4c2680c241e6.jpg" width="600" height="300" />
 
+### Q6. Which employees have sold to customers in the same city that they live in ?
+ - It turns out there are only two country where our staff can offer offline service – USA & UK. Callahan and Davolio in Seatle, USA and the rest in London, UK. 
+```
+SELECT DISTINCT e.LastName, e.Title, e.City, c.CompanyName
+FROM Employees e
+JOIN Orders o
+ON e.EmployeeID = o.EmployeeID 
+JOIN Customers c
+ON c.CustomerID = o.CustomerID
+WHERE c.City = e.City
+ORDER BY 1
+```
+<img src="https://user-images.githubusercontent.com/31917400/34916041-d8915aa8-f928-11e7-9ebc-eba39937046e.jpg" width="600" height="300" />
 
-
-
-
+### Q7. How many days on average does it take for each country from a placed order until for it to be shipped? Is there any relationship between this processing time and employees’ performance? 
+ - The visual left shows average processing time by each Staff ID and country. The visual right shows average processing time by country but in a bubble diagram.  
+```
+SELECT ShipCountry, EmployeeID, avg(julianday(OrderDate) - julianday(ShippedDate)) avg_process 
+FROM Orders 
+GROUP BY ShipCountry, EmployeeID
+ORDER BY ShipCountry, avg_process;
+```
+<img src="https://user-images.githubusercontent.com/31917400/34916042-db52950e-f928-11e7-8584-4563bb365b1f.jpg" width="600" height="900" />
 
 
 
