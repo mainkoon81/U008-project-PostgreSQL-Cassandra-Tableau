@@ -74,7 +74,28 @@ GROUP BY c.Country, s.CompanyName, o.OrderDate, s.CompanyName
 ```
 <img src="https://user-images.githubusercontent.com/31917400/34425622-6e11b0b6-ec25-11e7-8ef0-d16bd6a17720.jpg" width="600" height="350" />
 
+### Q3. Show by percentage what country is bringing most profit?
+ - Although the average spending of USA is not the biggest, this country is taking up the largest in total profit and percentage.  
+```
+WITH t1 AS (
+SELECT sum(UnitPrice*Quantity) AS total_profit
+FROM OrderDetails od
+JOIN Orders o
+ON od.OrderID = o.OrderID),
 
+t2 AS (
+SELECT sum(UnitPrice*Quantity) AS profit_by_country, ShipCountry AS country
+FROM OrderDetails od
+JOIN Orders o
+ON od.OrderID = o.OrderID
+GROUP BY country)
+
+SELECT country, profit_by_country, (profit_by_country/total_profit) AS percentage
+FROM t2
+JOIN t1
+ORDER BY percentage DESC;
+```
+<img src="https://user-images.githubusercontent.com/31917400/34425623-72ae6128-ec25-11e7-8c6a-05ffbd9efbca.jpg" width="300" height="250" />
 
 
 
