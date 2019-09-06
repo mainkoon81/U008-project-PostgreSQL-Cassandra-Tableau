@@ -1,5 +1,3 @@
-# SQL-project-00-DA
-
 ### [Contents] 
 
 __Case-01.__ Northwind-SQLite3 Data set
