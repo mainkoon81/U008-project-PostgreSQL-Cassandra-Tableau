@@ -178,7 +178,7 @@ log_data/2018/11/2018-11-12-events.json
 log_data/2018/11/2018-11-13-events.json
 ```
 Below is an example of what the data in a log file, 2018-11-12-events.json, looks like.
-<img src="https://user-images.githubusercontent.com/31917400/34916042-db52950e-f928-11e7-8584-4563bb365b1f.jpg" width="600" height="900" />
+<img src="https://user-images.githubusercontent.com/31917400/65054431-733fdc00-d965-11e9-95fb-e12e5b6347a6.png" />
 
 
 
