@@ -157,7 +157,7 @@ FROM Orders
 GROUP BY ShipCountry, EmployeeID
 ORDER BY ShipCountry, avg_process;
 ```
-<img src="https://user-images.githubusercontent.com/31917400/34916042-db52950e-f928-11e7-8584-4563bb365b1f.jpg" width="600" height="900" />
+<img src="https://user-images.githubusercontent.com/31917400/34916042-db52950e-f928-11e7-8584-4563bb365b1f.jpg" width="600" height="810" />
 
 
 #### >Case-02.
