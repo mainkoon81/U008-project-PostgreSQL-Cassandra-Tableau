@@ -198,7 +198,7 @@ __Schema for this task:__ Create a star schema optimized for queries on song pla
      - artist_id, name, location, latitude, longitude
    - **time:** timestamps of records in songplays broken down into specific units
      - start_time, hour, day, week, month, year, weekday
-
+<img src="https://user-images.githubusercontent.com/31917400/65378294-3f8aec00-dcae-11e9-961c-8231e7736534.png" />
 
 
 
